@@ -31,3 +31,5 @@ while input('do wanna play again y/n')=='y':
     start()
     cave = int(input('which cave do u wanna go'))
     game(cave)
+else:
+    print('thanks for playing')

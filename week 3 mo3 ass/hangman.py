@@ -75,11 +75,11 @@ def play(word):
                 guessed_letters.append(guess)
                 word_as_list=list(word_completion)
                 indices = [i for i,letter in enumerate(word) if letter in guess]
-                guessed+=1
+
                 for index in indices:
                     word_as_list[index]=guess
                     word_completion=''.join(word_as_list)
-
+                    guessed += 1
 
         elif len(guess)==len(word) and guess.isapha():
             if guess in guessed_word:
@@ -107,6 +107,8 @@ main()
 while input('play again(Y/N)').upper()=='y':
         word = get_word()
         play(word)
+else:
+    print('thanks for playing')
 
 
 
